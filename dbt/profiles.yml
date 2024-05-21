@@ -1,0 +1,13 @@
+<DBT_PROFILE>:
+  outputs:
+    dev:
+      account: "{{ env_var('DBT_SNOWFLAKE_ACCOUNT','UPDATE ME') }}"
+      database: "{{ env_var('DBT_DBNAME','UPDATE ME') }}"
+      password: "{{ env_var('DBT_PASSWORD', 'UPDATE ME')}}"
+      role: "{{ env_var('DBT_ROLE', 'UPDATE ME')}}"
+      schema: "{{ env_var('DBT_SCHEMA','DEV')}}"
+      threads: 1
+      type: snowflake
+      user: "{{ env_var('DBT_USER', 'UPDATE ME' )}}"
+      warehouse: "{{ env_var('DBT_WAREHOUSE', 'UPDATE ME')}}"
+  target: "{{ env_var( 'DBT_ENV', 'dev')}}"
