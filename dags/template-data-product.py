@@ -41,7 +41,7 @@ for item in [
 
 HOME = os.environ["HOME"]  # retrieve the location of your home folder
 project_name = DAG_ID.split('__')[0]
-dbt_path = f"{HOME}/dbt"
+dbt_path = f"/usr/local/airflow/dags/{project_name}/dbt"
 new_dbt_path = f"/tmp/dbt-{project_name}"
 dbt_exec = f'/usr/local/airflow/.local/bin/dbt'
 
@@ -62,8 +62,8 @@ with DAG(
     with TaskGroup(group_id='bash_task') as bash_task:
         bash_check = BashOperator(
             task_id='bash_check',
-            bash_command=f'echo "Current Working Directory: $(pwd)"'
-            +f'&& cd {dbt_path} && echo "Current Working Directory: $(pwd)" '
+            bash_command=f'echo "dbt_path : {dbt_path}" ' 
+            +f'&& cd {dbt_path} && ls && echo "Current Working Directory: $(pwd)" '
         )
         
     with TaskGroup(group_id='dbt_task') as dbt_task:
