@@ -9,7 +9,6 @@ The structure of dags folder is given below:
 │   └── dbt_helpers/
 │      └── __init__.py
 │      └── dbt_helpers.py
-│   └── __init__.py
 │   └── python-virtualenv-operator.py
 |   └── template-data-product.py
 ```
