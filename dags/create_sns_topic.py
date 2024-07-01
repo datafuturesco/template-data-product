@@ -17,7 +17,8 @@ def create_sns_topic(topic_name):
     topic_arn = topic_response['TopicArn']
     
     # Store the topic ARN in an Airflow Variable  - change the variable name to your preference
-    Variable.set("<SNS_VARIABLE>", topic_arn)
+    topic_var = topic_name + '_arn'
+    Variable.set(topic_var, topic_arn)
 
     print(f'Created SNS Topic: {topic_arn}')
  
