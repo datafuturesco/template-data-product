@@ -71,7 +71,7 @@ SQS queues subscribed to the topic receive message. We use SQSSensor operator wh
 
 Useful links on how to use sns and sqs client to set various attributes :
 
-    - SNS client : https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/sns.html
-    - SQS client : https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/sqs.html
-    - SNSPublish documentation : https://airflow.apache.org/docs/apache-airflow-providers-amazon/stable/_api/airflow/providers/amazon/aws/operators/sns/index.html
-    - SQSSensor documentation : https://airflow.apache.org/docs/apache-airflow-providers-amazon/stable/_api/airflow/providers/amazon/aws/sensors/sqs/index.html
+- SNS client : https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/sns.html
+- SQS client : https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/sqs.html
+- SNSPublish documentation : https://airflow.apache.org/docs/apache-airflow-providers-amazon/stable/_api/airflow/providers/amazon/aws/operators/sns/index.html
+- SQSSensor documentation : https://airflow.apache.org/docs/apache-airflow-providers-amazon/stable/_api/airflow/providers/amazon/aws/sensors/sqs/index.html
