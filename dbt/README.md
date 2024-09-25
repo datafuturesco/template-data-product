@@ -20,3 +20,12 @@ Lastly, you will want to change the `+database:` key to match your project.
 
 This file defines the defaults for all variables. Replace all the `UPDATE ME` with proper corresponding values related to Snowflake.
 And modify `<DBT_PROFILE>` with your snowflake profile created.
+
+### Cross-DBT project dependency handling
+
+To enable the cross/inter DBT project dependency where in one child DBT project can reference parent DBT project,
+we can leverage the DBT features - packages.yml and dbt_project.yml files.
+
+Refer - https://dev.to/elliott_cordo/avoiding-the-dbt-monolith-7ep
+
+Add the DBT project you want to refer as a package in your DBT packages.yml to refer to the models from that project.

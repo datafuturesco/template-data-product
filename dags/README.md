@@ -10,6 +10,7 @@ The structure of dags folder is given below:
 │      └── __init__.py
 │      └── dbt_helpers.py
 │   └── python-virtualenv-operator.py
+│   └── template-cross-project.py
 |   └── template-data-product.py
 ```
 
@@ -26,6 +27,12 @@ to install the dbt in an Virtual environment and trigger dbt run from it.
 Refer the `python-virtualenv-operator.py` for using PythonVirtualenvOperator to run dbt models.
 
 This DAG imports helper functions defined in the `dbt_helpers.py` of dbt_helpers packaged folder.
+
+#### template-cross-project.py
+
+If you want to incorporate the mutli-dbt project with cross-project dependencies, you can leverage this DAG to utilize the cross-project dependency.
+The parent DBT project is provided as a custom plugin to the Airflow Virtual env, which is included as a package to your child DBT project.
+Note that this DAG ensures that you build and run only your child models by passing the model name as the Airflow context variable.
 
 ## Cross-DAG Dependecies handling
 
