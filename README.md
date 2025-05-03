@@ -57,11 +57,6 @@ running MWAA instance and all changes to that branch are deployed to the environ
 
 We use a campground philosophy, meaning leave things better than you find them.
 
-## Who do I talk to?
-
-- Elliott Cordo
-- Dōvy Paukstys
-
 ## To Be Done
 
 - more tests
